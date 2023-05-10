@@ -9,14 +9,22 @@ def random_predict(number:int=1) -> int:
     Returns:
         int: Число попыток
     """
-
+    
+    # Реализуем алгоритм двоичного поиска, но дробление будет не пополам, а случайным
+    min_num = 1
+    max_num = 101
     count = 0
-
+    
     while True:
         count += 1
-        predict_number = np.random.randint(1, 101) # предполагаемое число
-        if number == predict_number:
-            break # выход из цикла, если угадали
+        cur_num = np.random.randint(min_num, max_num)
+        if   number < cur_num:
+            max_num = cur_num
+        elif number > cur_num:
+            min_num = cur_num
+        elif number == cur_num:
+            break # выход из цикла, если нашли искомое число
+        
     return(count)
 
 def score_game(random_predict) -> int:
