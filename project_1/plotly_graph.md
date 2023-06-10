@@ -1,1 +1,1 @@
-{% include 1_histogram.html %}
+{% include plotly/1_histogram.html %}
