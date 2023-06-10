@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# User ignore
+project_1/data
+
 # C extensions
 *.so
 
