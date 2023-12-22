@@ -6,6 +6,8 @@ __pycache__/
 # User ignore
 O_project_0
 project_1/data
+project_3/data
+project_4/data
 
 # C extensions
 *.so
